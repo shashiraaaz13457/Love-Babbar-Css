@@ -1,0 +1,30 @@
+div{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+/* #Box3{
+    position: relative;
+    left: 15px;
+    top: 100px;
+} */
+/* #Box1{
+    position: fixed;
+} */
+#Box3{
+    position: absolute;
+    left: 15px;
+    top: 100px;
+}
+#Box4{
+    position: sticky;
+    top: 0px;
+}
+
+.Wrapper{
+    height: 2000px;
+    background-color: yellow;
+    width: 100vw;
+}

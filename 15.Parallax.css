@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    /* This is used to stop scrolling the image in x-direction */
+    overflow-x: hidden;
+    /* overflow-y: auto; */
+    perspective:10px;
+}
+.container{
+    position: relative;
+    height: 100%;
+    /* To use the properties of flexbox you have to write display-flex  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* It is used because we have to display in 3D if we not mention this then 2D*/
+    transform-style: preserve-3d;
+    /*For overlapping the image */
+    z-index:-1;
+
+}
+
+.Background{
+    /* We use scale to get the bigger picture of the distance object which is far from us. */
+    transform:translateZ(-40px) scale(5) ;
+}
+.Foreground{
+    transform: translateZ(-20px) scale(3);
+}
+.Background, .Foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* TO layer after the image */
+    z-index:-1;
+    /* To fit the image in container */
+    object-fit: cover;
+}
+h1{
+    position: absolute;
+    top: 5rem;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    font-size:10rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.Text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin:5rem 0 ;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    /* To fix the image and the text will scroll on the image*/
+    background-attachment: fixed;
+    /* TO Center the background Image */
+    background-position: center;
+    /* Same as object fit ,it will fit the image at the given height and wiidth */
+    background-size: cover;
+    height: 500px;
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}

@@ -1,0 +1,68 @@
+*{
+    /* It is used to limit the size which is given even if border of 2px is applied it not takes extra space */
+    box-sizing: border-box;
+}
+.container{
+    height: 400px;
+    border: 2px solid green;
+    display: flex; /*Main Axis*/
+    /* flex-direction: column; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start;
+    align-items: flex-end;
+    align-items: stretch; */
+    align-items: center;
+
+    /* To match the baseline of every element. */
+    /* align-items: baseline; */
+
+    /* gap: 10px; */
+
+    align-content: flex-start;
+    /* align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly; */
+     
+}
+.box{
+    border: 1px solid brown;
+    background-color: aqua;
+    width: 100px;
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* Makes flex-items responsive */
+    /* flex-basis: 100px; */
+    flex-basis: 50%;
+}
+#Box1{
+    order:1;
+    /* Box1 squeezes Quickly */
+    /* flex-shrink: 4; */
+    /* flex-grow: 1; */
+    /* align-self: flex-start; */
+}
+#Box3{
+    /* flex-grow: 1; */
+    order:3;
+    /* flex-shrink: 2; */
+}
+#Box4{
+    order: 0;
+    /* align-self: flex-end; */
+}
+#Box2{
+    /* align-self: stretch; */
+}

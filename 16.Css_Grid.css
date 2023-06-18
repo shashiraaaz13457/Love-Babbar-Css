@@ -1,0 +1,31 @@
+.container{
+    background-color: brown; 
+    height: 500px;
+    border:3px solid black ; 
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    /* you can use repeat keyword too to repeat that particular fr or px */
+    /* fr is used to divide equally and make responsive grid */
+    grid-template-rows:repeat(4,1fr);
+    /* Four column of size 1fr */
+    /* fr means fraction */
+    gap: 10px;
+}
+.box{
+    background-color: aqua;
+    border: 3px solid black ; 
+    /* height: 80px; */
+    /* width: 80px; */
+}
+#box1{
+    /* used to extend the column */
+    grid-column-start: 1;
+    grid-column-end: 3;
+} 
+#box3{
+    /* used to extend the rows */
+    grid-row-start: 2;
+    grid-row-end: 4;
+    /* 4 is the line no. */
+}

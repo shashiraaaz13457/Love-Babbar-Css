@@ -1,0 +1,16 @@
+.box{
+    /* If the Content is more and the max-height is less then it overflows */
+    max-height: 100px;
+    border: 1px solid black;
+    /* To Control the Overflow we use overflow option and choose scroll */
+    /* overflow: scroll; */
+    /* overflow: visible; */
+    /* overflow: hidden; */
+    overflow: auto;
+}
+.mydiv{
+    margin-top: 35px;
+    /* When Content is more then size of the div. automatically grows In case of min-height. */
+    min-height: 100px;
+    border: 1px solid black;
+}

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container{
+    height: 100%;
+    max-width: 1200px;
+    /* margin: 0 and auto means the container should me at center  */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h1{
+    margin: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.gallery{
+    display: flex;
+    /* we use flex-wrap : wrap, so that the image by default don't arrange in row wise manner */
+    flex-wrap: wrap;
+    /* To provide space between images */
+    justify-content: space-between;
+}
+
+.card{
+    width: 32%;
+    /* we use relative positioning so that we overlap the text here using absolute positioning */
+    position: relative;
+    margin-bottom: 20px;
+    /* To round the corner of the card we use border radius*/
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img{
+    /* width equal to parent element i.e card */
+    width: 100%;
+    height: 100%;
+    /* To make the img black & white */
+    filter: grayscale(100%);
+    box-shadow:0 0 20px #333 ;
+    /* To Cover the whole image in the card */
+    object-fit: cover;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    /* We use grayscale(0%) so that no effect of black and white will be seen when we hover it. */
+    filter: drop-shadow(0 0 10px#333);
+    /* for how much second you want to take to scale the image */
+    transition: 0.5s;
+}
+
+.card:hover img{
+    filter: grayscale(0%);
+}
+
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5)0%, rgba(255,255,255,0) 100%);
+    transition: 0.5s;
+}
+
+.card:hover figcaption{
+    /* When we hover then make visible the text. */
+    opacity: 1;
+    transition:scale(1.03);
+}
